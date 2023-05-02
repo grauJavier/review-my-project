@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+      <h1 id="title">Survey</h1>
+      <p id="description">Survey about favorite beverage</p>
+    </div>
+    <form id="survey-form">
+        <div class="question-group">
+            <label class="label-title" id="name-label" for="name">Name</label>
+            <input id="name" type="text" placeholder="Enter your name" required>
+        </div>
+        <div class="question-group">
+            <label class="label-title" id="email-label" for="email">Email</label>
+            <input id="email" type="email" placeholder="Enter your email" required>
+        </div>
+        <div class="question-group">
+            <label class="label-title" id="number-label" for="number">Age</label>
+            <input id="number" type="number" placeholder="Enter your age (optional)" min="10" max="80">
+        </div>
+
+        <div class="question-group">
+            <label class="label-title" id="beverage-label" for="beverage">What it your favorite beverage?</label>
+            <select id="dropdown" name="beverage" required>
+              <option disabled selected value>Select current beverage</option>
+              <option value="coffee">Coffee</option>
+              <option value="tee">Tee</option>
+              <option value="soda">Coke or Soda</option>
+              <option value="water">Water</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div id="button group" class="question-group">
+            <label class="label-title" id="beverage-label" for="beverage">How often you drink your favorite beverage in a day?</label>
+              <input name="a-lot" value="a-lot" type="radio" class="input-radio" checked>A lot</label>
+            <label>
+              <input name="many-times" value="many-times" type="radio" class="input-radio">Many times</label>
+            <label>
+                <input name="user-recommend" value="sometimes" type="radio" class="input-radio">Sometimes</label>
+          </div>
+
+          <div id="checkbox-group" class="question-group">
+            <label class="label-title" id="beverage-label" for="beverage">Where do you drink it mostly?</label>  
+            <label>
+                <input name="where-drink" value="outdoor" type="checkbox" class="input-checkbox">Outdoor</label>
+            <label>
+              <input name="where-drink" value="at-home" type="checkbox" class="input-checkbox">At home</label>
+            <label>
+                <input name="where-drink" value="at-restaurant" type="checkbox" class="input-checkbox">At restaurants</label>
+            <label>
+                <input name="where-drink" value="other" type="checkbox" class="input-checkbox">Other</label>
+          </div>
+
+          <div id="text-box" class="question-group">
+            <p>Is there anything else you want to tell us about your favorite beverage?</p>
+            <textarea id="comments" id="input-textbox" name="comments" placeholder="Enter your comment here..."></textarea>
+          </div>
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+    </form>
+    <script>
+        function ValidateEmail(mail) {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value)) {
+                return (true);
+            }
+            alert("You have entered an invalid email address!");
+            return (false);
+        }
+    </script>
+</body>
+</html>
